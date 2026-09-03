@@ -1,1 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CEIAS - Colégio Estadual Irmã Ambrósia Sabatovich</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <h1>CEIAS</h1>
+        <span>Colégio Estadual Irmã Ambrósia Sabatovich</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="inicio" class="hero">
+    <div class="container hero-content">
+      <h2>Bem-vindo ao CEIAS</h2>
+      <p>Educando com excelência, valores e compromisso com o futuro.</p>
+      <a href="#contato" class="btn">Enviar Mensagem</a>
+    </div>
+  </section>
+
+  <section id="sobre" class="section">
+    <div class="container">
+      <h2 class="section-title">Sobre a Escola</h2>
+      <p>O Colégio Estadual Irmã Ambrósia Sabatovich é dedicado ao desenvolvimento acadêmico, social e cultural dos seus alunos, oferecendo um ambiente seguro e estruturado para o aprendizado.</p>
+    </div>
+  </section>
+
+  <section id="galeria" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">Galeria de Fotos</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item"><img src="https://via.placeholder.com/400x300?text=Fachada+do+Colegio" alt="Fachada do Colégio"></div>
+        <div class="gallery-item"><img src="https://via.placeholder.com/400x300?text=Salas+de+Aula" alt="Salas de Aula"></div>
+        <div class="gallery-item"><img src="https://via.placeholder.com/400x300?text=Quadra+Esportiva" alt="Quadra Esportiva"></div>
+        <div class="gallery-item"><img src="https://via.placeholder.com/400x300?text=Eventos+Escolares" alt="Eventos Escolares"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="section">
+    <div class="container">
+      <h2 class="section-title">Fale Conosco</h2>
+      <form id="contact-form" class="contact-form">
+        <div class="form-group">
+          <label for="nome">Nome Completo</label>
+          <input type="text" id="nome" required placeholder="Digite seu nome">
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" required placeholder="Digite seu e-mail">
+        </div>
+        <div class="form-group">
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" rows="5" required placeholder="Escreva sua mensagem aqui..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-submit">Enviar Mensagem</button>
+        <p id="form-status" class="status-msg"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; CEIAS - Colégio Estadual Irmã Ambrósia Sabatovich. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
