@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CEIAS - Colégio Estadual Irmã Ambrósia Sabatovich</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              900: '#0B2545',
+              800: '#134074',
+              700: '#1D4E89',
+              600: '#2364AA'
+            },
+            sky: {
+              400: '#38BDF8',
+              500: '#00A8E8',
+              600: '#0084B8',
+              100: '#E0F2FE',
+              50: '#F0F9FF'
+            },
+            brand: {
+              gold: '#F59E0B'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom scrollbar and minor utility adjustments */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #F1F5F9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #134074;
+      border-radius: 5px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #0B2545;
+    }
+    .glass-nav {
+      background: rgba(11, 37, 69, 0.95);
+      backdrop-filter: blur(12px);
+    }
+    .hero-bg {
+      background: linear-gradient(135deg, rgba(11, 37, 69, 0.92) 0%, rgba(19, 64, 116, 0.85) 100%), 
+                  url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-sky-500 selection:text-white">
+
+  <!-- Header / Navigation Bar -->
+  <header class="sticky top-0 z-40 w-full glass-nav text-white shadow-xl transition-all duration-300" id="main-header">
+    <!-- Top Announcement Bar -->
+    <div class="bg-navy-900 border-b border-navy-800/60 py-1.5 px-4 text-xs font-medium text-slate-300">
+      <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+        <div class="flex items-center gap-4">
+          <span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-graduation-cap text-sky-400"></i> Matrículas e Transferências 2026 Abertas</span>
+          <span class="hidden md:inline text-slate-500">|</span>
+          <span class="hidden md:inline-flex items-center gap-1.5"><i class="fa-solid fa-clock text-sky-400"></i> Seg a Sex: 07h30 às 22h30</span>
+        </div>
+        <div class="flex items-center gap-4 text-xs">
+          <a href="tel:4133330000" class="hover:text-sky-400 transition-colors"><i class="fa-solid fa-phone mr-1"></i> (41) 3333-0000</a>
+          <a href="mailto:contato@ceias.edu.br" class="hover:text-sky-400 transition-colors hidden sm:inline"><i class="fa-solid fa-envelope mr-1"></i> contato@ceias.edu.br</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo Brand -->
+        <a href="#inicio" class="flex items-center gap-3 group">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-sky-500 to-navy-800 flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform border border-sky-400/30">
+            <i class="fa-solid fa-school text-2xl text-white"></i>
+          </div>
+          <div>
+            <span class="block text-xl font-extrabold tracking-tight text-white group-hover:text-sky-400 transition-colors">CEIAS</span>
+            <span class="block text-[10px] sm:text-xs font-light text-sky-200 tracking-wider uppercase">Colégio Estadual Irmã Ambrósia Sabatovich</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center space-x-1 font-medium text-sm">
+          <a href="#inicio" class="px-3 py-2 rounded-lg hover:bg-white/10 hover:text-sky-300 transition-colors">Início</a>
+          <a href="#sobre" class="px-3 py-2 rounded-lg hover:bg-white/10 hover:text-sky-300 transition-colors">Sobre</a>
+          <a href="#modalidades" class="px-3 py-2 rounded-lg hover:bg-white/10 hover:text-sky-300 transition-colors">Modalidades</a>
+          <a href="#galeria" class="px-3 py-2 rounded-lg hover:bg-white/10 hover:text-sky-300 transition-colors">Galeria</a>
+          <a href="#noticias" class="px-3 py-2 rounded-lg hover:bg-white/10 hover:text-sky-300 transition-colors">Notícias</a>
+          <a href="#equipe" class="px-3 py-2 rounded-lg hover:bg-white/10 hover:text-sky-300 transition-colors">Equipe</a>
+          <a href="#secretaria" class="px-3 py-2 rounded-lg hover:bg-white/10 hover:text-sky-300 transition-colors">Secretaria</a>
+          <a href="#contato" class="px-3 py-2 rounded-lg hover:bg-white/10 hover:text-sky-300 transition-colors">Contato</a>
+        </nav>
+
+        <!-- Right Header CTA & Search Button -->
+        <div class="hidden sm:flex items-center gap-3">
+          <button onclick="toggleSearchModal()" aria-label="Pesquisar no site" class="p-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-sky-300 hover:text-white transition-all">
+            <i class="fa-solid fa-magnifying-glass text-lg"></i>
+          </button>
+          <a href="#secretaria" class="inline-flex items-center justify-center px-4 py-2.5 rounded-xl text-sm font-semibold text-navy-900 bg-sky-400 hover:bg-sky-300 shadow-lg shadow-sky-500/20 transition-all hover:-translate-y-0.5">
+            <i class="fa-solid fa-user-graduate mr-2"></i> Portal Aluno
+          </a>
+        </div>
+
+        <!-- Mobile Hamburger Button -->
+        <div class="flex items-center gap-2 lg:hidden">
+          <button onclick="toggleSearchModal()" aria-label="Pesquisar" class="p-2.5 rounded-lg bg-white/10 text-sky-300">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <button onclick="toggleMobileMenu()" aria-label="Abrir menu" class="p-2.5 rounded-lg bg-white/10 text-white hover:bg-white/20 focus:outline-none">
+            <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div id="mobile-menu" class="fixed inset-0 z-50 bg-navy-900/95 backdrop-blur-md hidden flex-col justify-between p-6 transition-all duration-300 lg:hidden">
+    <div class="flex items-center justify-between border-b border-navy-800 pb-4">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-lg bg-sky-500 flex items-center justify-center text-white font-bold">
+          <i class="fa-solid fa-school"></i>
+        </div>
+        <div>
+          <span class="block text-lg font-bold text-white">CEIAS</span>
+          <span class="block text-xs text-sky-300">Irmã Ambrósia Sabatovich</span>
+        </div>
+      </div>
+      <button onclick="toggleMobileMenu()" aria-label="Fechar menu" class="p-2 rounded-lg text-slate-300 hover:text-white hover:bg-white/10">
+        <i class="fa-solid fa-xmark text-2xl"></i>
+      </button>
+    </div>
+
+    <nav class="flex flex-col space-y-3 my-6 font-medium text-lg text-slate-200">
+      <a href="#inicio" onclick="toggleMobileMenu()" class="px-4 py-2.5 rounded-xl hover:bg-white/10 hover:text-sky-300 flex items-center gap-3"><i class="fa-solid fa-house w-6 text-sky-400"></i> Início</a>
+      <a href="#sobre" onclick="toggleMobileMenu()" class="px-4 py-2.5 rounded-xl hover:bg-white/10 hover:text-sky-300 flex items-center gap-3"><i class="fa-solid fa-landmark w-6 text-sky-400"></i> Sobre o CEIAS</a>
+      <a href="#modalidades" onclick="toggleMobileMenu()" class="px-4 py-2.5 rounded-xl hover:bg-white/10 hover:text-sky-300 flex items-center gap-3"><i class="fa-solid fa-book-open w-6 text-sky-400"></i> Modalidades e Cursos</a>
+      <a href="#galeria" onclick="toggleMobileMenu()" class="px-4 py-2.5 rounded-xl hover:bg-white/10 hover:text-sky-300 flex items-center gap-3"><i class="fa-solid fa-images w-6 text-sky-400"></i> Galeria de Fotos</a>
+      <a href="#noticias" onclick="toggleMobileMenu()" class="px-4 py-2.5 rounded-xl hover:bg-white/10 hover:text-sky-300 flex items-center gap-3"><i class="fa-solid fa-newspaper w-6 text-sky-400"></i> Notícias e Eventos</a>
+      <a href="#equipe" onclick="toggleMobileMenu()" class="px-4 py-2.5 rounded-xl hover:bg-white/10 hover:text-sky-300 flex items-center gap-3"><i class="fa-solid fa-users w-6 text-sky-400"></i> Corpo Docente</a>
+      <a href="#secretaria" onclick="toggleMobileMenu()" class="px-4 py-2.5 rounded-xl hover:bg-white/10 hover:text-sky-300 flex items-center gap-3"><i class="fa-solid fa-folder-open w-6 text-sky-400"></i> Secretaria Virtual</a>
+      <a href="#contato" onclick="toggleMobileMenu()" class="px-4 py-2.5 rounded-xl hover:bg-white/10 hover:text-sky-300 flex items-center gap-3"><i class="fa-solid fa-address-book w-6 text-sky-400"></i> Contato</a>
+    </nav>
+
+    <div class="border-t border-navy-800 pt-4 flex flex-col gap-3">
+      <a href="#contato" onclick="toggleMobileMenu()" class="w-full text-center py-3 rounded-xl bg-sky-500 font-bold text-navy-900 shadow-lg">
+        <i class="fa-solid fa-paper-plane mr-2"></i> Fale Conosco
+      </a>
+      <p class="text-center text-xs text-slate-400">&copy; 2026 Colégio Estadual Irmã Ambrósia Sabatovich</p>
+    </div>
+  </div>
+
+  <!-- Search Modal Overlay -->
+  <div id="search-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-white dark:bg-navy-900 rounded-2xl w-full max-w-2xl shadow-2xl p-6 relative border border-slate-200">
+      <button onclick="toggleSearchModal()" aria-label="Fechar busca" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 dark:hover:text-white">
+        <i class="fa-solid fa-xmark text-xl"></i>
+      </button>
+      <h3 class="text-lg font-bold text-navy-900 dark:text-white mb-4"><i class="fa-solid fa-magnifying-glass text-sky-500 mr-2"></i> O que você procura no CEIAS?</h3>
+      <div class="relative mb-4">
+        <input type="text" id="site-search-input" onkeyup="handleQuickSearch()" placeholder="Digite por ex: Robótica, Matrículas, Boletim, Feira de Ciências..." class="w-full pl-11 pr-4 py-3 rounded-xl bg-slate-100 dark:bg-navy-800 text-slate-800 dark:text-white border border-slate-200 dark:border-navy-700 focus:outline-none focus:ring-2 focus:ring-sky-500">
+        <i class="fa-solid fa-search absolute left-4 top-4 text-slate-400"></i>
+      </div>
+      <div id="search-results-box" class="max-h-60 overflow-y-auto space-y-2 text-sm">
+        <p class="text-slate-500 dark:text-slate-400 text-xs italic">Sugestões rápidas: Matrículas 2026, Calendário Escolar, Feira Cultural, Horários de Aulas</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="inicio" class="hero-bg relative text-white py-24 lg:py-32 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-500/20 border border-sky-400/40 text-sky-300 text-xs sm:text-sm font-semibold tracking-wide">
+            <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
+            Tradição &amp; Inovação na Educação Pública
+          </div>
+
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-white">
+            Formando cidadãos com <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-sky-200 to-white">excelência e propósito</span>.
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-200 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+            No <strong>Colégio Estadual Irmã Ambrósia Sabatovich (CEIAS)</strong>, unimos um ensino dinâmico, projetos de inovação tecnológica e um forte apoio comunitário para construir um futuro repleto de conquistas.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+            <a href="#modalidades" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-sky-500 hover:bg-sky-400 text-navy-900 font-bold text-center shadow-lg shadow-sky-500/30 transition-all hover:scale-105">
+              <i class="fa-solid fa-book-open mr-2"></i> Conheça Nossos Cursos
+            </a>
+            <a href="#contato" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold text-center backdrop-blur-md transition-all">
+              <i class="fa-solid fa-envelope mr-2"></i> Fale Conosco
+            </a>
+          </div>
+
+          <!-- Feature badges -->
+          <div class="pt-6 grid grid-cols-2 sm:grid-cols-3 gap-3 border-t border-white/10 text-xs sm:text-sm text-slate-300">
+            <div class="flex items-center gap-2 justify-center lg:justify-start">
+              <i class="fa-solid fa-circle-check text-sky-400"></i> Laboratórios Modernos
+            </div>
+            <div class="flex items-center gap-2 justify-center lg:justify-start">
+              <i class="fa-solid fa-circle-check text-sky-400"></i> Clube de Robótica
+            </div>
+            <div class="flex items-center gap-2 justify-center lg:justify-start">
+              <i class="fa-solid fa-circle-check text-sky-400"></i> Quadra Poliesportiva
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Card Graphic -->
+        <div class="lg:col-span-5">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            <div class="absolute -inset-1 bg-gradient-to-r from-sky-400 to-navy-600 rounded-3xl blur-lg opacity-40 animate-pulse"></div>
+            
+            <div class="relative rounded-3xl bg-navy-900/90 border border-white/10 p-6 sm:p-8 backdrop-blur-xl shadow-2xl space-y-6">
+              <div class="flex items-center justify-between border-b border-white/10 pb-4">
+                <span class="text-xs font-semibold text-sky-400 uppercase tracking-wider">Painel Institucional</span>
+                <span class="text-xs px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-medium">Ano Letivo 2026</span>
+              </div>
+
+              <!-- Quick Info List -->
+              <div class="space-y-4">
+                <div class="flex items-start gap-4">
+                  <div class="w-10 h-10 rounded-xl bg-sky-500/20 text-sky-400 flex items-center justify-center shrink-0">
+                    <i class="fa-solid fa-award text-lg"></i>
+                  </div>
+                  <div>
+                    <h2 class="font-bold text-white text-base">Reconhecimento Acadêmico</h2>
+                    <p class="text-xs text-slate-300">Destaque regional em olimpíadas de matemática, ciências e projetos culturais.</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                  <div class="w-10 h-10 rounded-xl bg-sky-500/20 text-sky-400 flex items-center justify-center shrink-0">
+                    <i class="fa-solid fa-laptop-code text-lg"></i>
+                  </div>
+                  <div>
+                    <h2 class="font-bold text-white text-base">Ensino Médio Técnico</h2>
+                    <p class="text-xs text-slate-300">Cursos integrados voltados para as demandas do mercado de trabalho moderno.</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                  <div class="w-10 h-10 rounded-xl bg-sky-500/20 text-sky-400 flex items-center justify-center shrink-0">
+                    <i class="fa-solid fa-people-roof text-lg"></i>
+                  </div>
+                  <div>
+                    <h2 class="font-bold text-white text-base">Comunidade &amp; Família</h2>
+                    <p class="text-xs text-slate-300">Integração contínua entre escola, alunos, pais e comunidade local.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pt-2">
+                <a href="#secretaria" class="block w-full py-3 text-center rounded-xl bg-white/10 hover:bg-white/20 text-sky-300 font-semibold text-xs border border-white/10 transition-colors">
+                  Acessar Editais e Comunicados <i class="fa-solid fa-arrow-right ml-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Live Counters Bar -->
+      <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/10">
+        <div class="text-center">
+          <div class="text-3xl sm:text-4xl font-extrabold text-sky-400">+1.200</div>
+          <div class="text-xs sm:text-sm text-slate-200 mt-1">Alunos Matriculados</div>
+        </div>
+        <div class="text-center border-l border-white/10">
+          <div class="text-3xl sm:text-4xl font-extrabold text-sky-400">+45</div>
+          <div class="text-xs sm:text-sm text-slate-200 mt-1">Anos de Tradição</div>
+        </div>
+        <div class="text-center border-l border-white/10">
+          <div class="text-3xl sm:text-4xl font-extrabold text-sky-400">98%</div>
+          <div class="text-xs sm:text-sm text-slate-200 mt-1">Aprovação e Frequência</div>
+        </div>
+        <div class="text-center border-l border-white/10">
+          <div class="text-3xl sm:text-4xl font-extrabold text-sky-400">+50</div>
+          <div class="text-xs sm:text-sm text-slate-200 mt-1">Professores e Educadores</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Sobre o CEIAS Section -->
+  <section id="sobre" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-sky-600 font-bold text-xs uppercase tracking-wider bg-sky-50 px-3 py-1 rounded-full border border-sky-100">Nossa Identidade</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 mt-3">Sobre o Colégio CEIAS</h2>
+        <p class="text-slate-600 text-base mt-3">Conheça nossa trajetória, nossa filosofia de ensino e o legado inspirador da nossa patrona.</p>
+      </div>
+
+      <!-- Tab Buttons -->
+      <div class="flex flex-wrap justify-center gap-3 mb-12" id="about-tabs-nav">
+        <button onclick="switchTab('proposta')" id="tab-btn-proposta" class="about-tab-btn px-6 py-3 rounded-xl font-bold text-sm transition-all bg-navy-900 text-white shadow-md">
+          <i class="fa-solid fa-graduation-cap mr-2"></i> Proposta Pedagógica
+        </button>
+        <button onclick="switchTab('instalacoes')" id="tab-btn-instalacoes" class="about-tab-btn px-6 py-3 rounded-xl font-bold text-sm transition-all bg-slate-100 text-slate-700 hover:bg-slate-200">
+          <i class="fa-solid fa-building-columns mr-2"></i> Nossas Instalações
+        </button>
+        <button onclick="switchTab('patrona')" id="tab-btn-patrona" class="about-tab-btn px-6 py-3 rounded-xl font-bold text-sm transition-all bg-slate-100 text-slate-700 hover:bg-slate-200">
+          <i class="fa-solid fa-heart-pulse mr-2"></i> Irmã Ambrósia Sabatovich
+        </button>
+      </div>
+
+      <!-- Tab Content Cards -->
+      <div class="bg-slate-50 rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-sm">
+        
+        <!-- Tab 1: Proposta Pedagógica -->
+        <div id="tab-content-proposta" class="about-tab-content grid md:grid-cols-2 gap-8 items-center">
+          <div class="space-y-4">
+            <h3 class="text-2xl font-bold text-navy-900">Formação Integral e Cidadania Ativa</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Nossa proposta pedagógica prioriza o desenvolvimento intelectual, ético e social do estudante. Oferecemos conteúdos alinhados à BNCC com metodologias ativas, incentivando o pensamento crítico, a pesquisa científica e o trabalho colaborativo.
+            </p>
+            <ul class="space-y-2 text-sm text-slate-700">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check-circle text-sky-500"></i> Projetos interdisciplinares de robótica e sustentabilidade.</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check-circle text-sky-500"></i> Acompanhamento pedagógico e suporte de escuta aos alunos.</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check-circle text-sky-500"></i> Incentivo à participação em olimpíadas de conhecimento nacional.</li>
+            </ul>
+          </div>
+          <div class="relative">
+            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=800&auto=format&fit=crop" alt="Proposta Pedagógica" class="rounded-2xl shadow-lg object-cover w-full h-72">
+          </div>
+        </div>
+
+        <!-- Tab 2: Instalações -->
+        <div id="tab-content-instalacoes" class="about-tab-content hidden grid md:grid-cols-2 gap-8 items-center">
+          <div class="space-y-4">
+            <h3 class="text-2xl font-bold text-navy-900">Infraestrutura Voltada ao Aprendizado</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              O CEIAS dispõe de salas de aula arejadas, laboratórios de informática totalmente equipados, biblioteca acervada, laboratório de ciências, refeitório amplo e quadra coberta para a prática de esportes e eventos comunitários.
+            </p>
+            <div class="grid grid-cols-2 gap-3 text-xs font-semibold text-navy-900">
+              <div class="bg-white p-3 rounded-xl shadow-sm border border-slate-200"><i class="fa-solid fa-flask text-sky-500 mr-2"></i> Lab. Ciências</div>
+              <div class="bg-white p-3 rounded-xl shadow-sm border border-slate-200"><i class="fa-solid fa-desktop text-sky-500 mr-2"></i> Lab. Informática</div>
+              <div class="bg-white p-3 rounded-xl shadow-sm border border-slate-200"><i class="fa-solid fa-basketball text-sky-500 mr-2"></i> Quadra Coberta</div>
+              <div class="bg-white p-3 rounded-xl shadow-sm border border-slate-200"><i class="fa-solid fa-book-bookmark text-sky-500 mr-2"></i> Biblioteca Central</div>
+            </div>
+          </div>
+          <div class="relative">
+            <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?q=80&w=800&auto=format&fit=crop" alt="Instalações da Escola" class="rounded-2xl shadow-lg object-cover w-full h-72">
+          </div>
+        </div>
+
+        <!-- Tab 3: Irmã Ambrósia -->
+        <div id="tab-content-patrona" class="about-tab-content hidden grid md:grid-cols-2 gap-8 items-center">
+          <div class="space-y-4">
+            <h3 class="text-2xl font-bold text-navy-900">A História de Irmã Ambrósia Sabatovich</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Dedicada à missão de educar e acolher a juventude, a Irmã Ambrósia Sabatovich marcou a comunidade com seu trabalho humanitário, perseverança e amor ao ensino. Sua vida permanece como farol de ética, empatia e compromisso para todos os nossos educandos e professores.
+            </p>
+            <blockquote class="italic border-l-4 border-sky-500 pl-4 py-1 text-slate-700 text-xs sm:text-sm">
+              "Educar não é apenas transmitir saberes, é acender a esperança e capacitar o próximo para transformar o mundo."
+            </blockquote>
+          </div>
+          <div class="relative">
+            <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=800&auto=format&fit=crop" alt="Patrona Irmã Ambrósia" class="rounded-2xl shadow-lg object-cover w-full h-72">
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Modalidades e Cursos Section -->
+  <section id="modalidades" class="py-20 bg-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-sky-600 font-bold text-xs uppercase tracking-wider bg-sky-50 px-3 py-1 rounded-full border border-sky-200">Cursos &amp; Etapas</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 mt-3">Modalidades de Ensino</h2>
+        <p class="text-slate-600 text-base mt-3">Clique em qualquer modalidade para ver mais detalhes sobre turnos, matriz curricular e diferenciais.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Course Card 1 -->
+        <div onclick="openCourseModal('fund2')" class="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all cursor-pointer border border-slate-200 group hover:-translate-y-1">
+          <div class="w-14 h-14 rounded-2xl bg-sky-100 text-sky-600 flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-sky-500 group-hover:text-white transition-colors">
+            <i class="fa-solid fa-child"></i>
+          </div>
+          <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-100 text-slate-600">6º ao 9º Ano</span>
+          <h3 class="text-xl font-bold text-navy-900 mt-3 group-hover:text-sky-600 transition-colors">Ensino Fundamental II</h3>
+          <p class="text-slate-600 text-sm mt-2 line-clamp-3">Desenvolvimento das habilidades fundamentais com foco no raciocínio lógico, linguagem, ciências e convívio social harmonioso.</p>
+          <div class="mt-6 flex items-center text-sky-600 font-semibold text-xs group-hover:translate-x-1 transition-transform">
+            Saiba mais <i class="fa-solid fa-arrow-right ml-2"></i>
+          </div>
+        </div>
+
+        <!-- Course Card 2 -->
+        <div onclick="openCourseModal('medio')" class="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all cursor-pointer border border-slate-200 group hover:-translate-y-1">
+          <div class="w-14 h-14 rounded-2xl bg-navy-100 text-navy-800 flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-navy-800 group-hover:text-white transition-colors">
+            <i class="fa-solid fa-user-graduate"></i>
+          </div>
+          <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-100 text-slate-600">1ª à 3ª Série</span>
+          <h3 class="text-xl font-bold text-navy-900 mt-3 group-hover:text-sky-600 transition-colors">Ensino Médio Regular</h3>
+          <p class="text-slate-600 text-sm mt-2 line-clamp-3">Preparação consolidada para o ENEM, vestibulares e formação cidadã através do Aprofundamento nas Áreas do Conhecimento.</p>
+          <div class="mt-6 flex items-center text-sky-600 font-semibold text-xs group-hover:translate-x-1 transition-transform">
+            Saiba mais <i class="fa-solid fa-arrow-right ml-2"></i>
+          </div>
+        </div>
+
+        <!-- Course Card 3 -->
+        <div onclick="openCourseModal('tecnico')" class="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all cursor-pointer border border-slate-200 group hover:-translate-y-1">
+          <div class="w-14 h-14 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+            <i class="fa-solid fa-laptop-code"></i>
+          </div>
+          <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700">Integrado &amp; Subsequente</span>
+          <h3 class="text-xl font-bold text-navy-900 mt-3 group-hover:text-sky-600 transition-colors">Ensino Médio Técnico</h3>
+          <p class="text-slate-600 text-sm mt-2 line-clamp-3">Formação profissionalizante em Tecnologia da Informação, Administração e Logística com prática em laboratórios.</p>
+          <div class="mt-6 flex items-center text-sky-600 font-semibold text-xs group-hover:translate-x-1 transition-transform">
+            Saiba mais <i class="fa-solid fa-arrow-right ml-2"></i>
+          </div>
+        </div>
+
+        <!-- Course Card 4 -->
+        <div onclick="openCourseModal('eja')" class="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all cursor-pointer border border-slate-200 group hover:-translate-y-1">
+          <div class="w-14 h-14 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-amber-600 group-hover:text-white transition-colors">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+          </div>
+          <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-amber-50 text-amber-700">Noturno</span>
+          <h3 class="text-xl font-bold text-navy-900 mt-3 group-hover:text-sky-600 transition-colors">EJA (Jovens e Adultos)</h3>
+          <p class="text-slate-600 text-sm mt-2 line-clamp-3">Oportunidade para concluir os estudos do Ensino Fundamental e Médio com metodologia adaptada e suporte pedagógico.</p>
+          <div class="mt-6 flex items-center text-sky-600 font-semibold text-xs group-hover:translate-x-1 transition-transform">
+            Saiba mais <i class="fa-solid fa-arrow-right ml-2"></i>
+          </div>
+        </div>
+
+        <!-- Course Card 5 -->
+        <div onclick="openCourseModal('extracurricular')" class="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all cursor-pointer border border-slate-200 group hover:-translate-y-1 md:col-span-2 lg:col-span-2">
+          <div class="flex items-start justify-between">
+            <div class="w-14 h-14 rounded-2xl bg-purple-100 text-purple-600 flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-purple-600 group-hover:text-white transition-colors">
+              <i class="fa-solid fa-icons"></i>
+            </div>
+            <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-purple-50 text-purple-700">Projetos Especiais</span>
+          </div>
+          <h3 class="text-xl font-bold text-navy-900 mt-1 group-hover:text-sky-600 transition-colors">Projetos Extracurriculares &amp; Clubes</h3>
+          <p class="text-slate-600 text-sm mt-2">Atividades no contra-turno: Clube de Robótica Lego/Arduino, Fanfarra Escolar, Treinos de Futsal e Vôlei, Grupo de Teatro e Coral Institucional.</p>
+          <div class="mt-6 flex items-center text-sky-600 font-semibold text-xs group-hover:translate-x-1 transition-transform">
+            Saiba mais <i class="fa-solid fa-arrow-right ml-2"></i>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Course Detail Modal -->
+  <div id="course-modal" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-white rounded-3xl w-full max-w-2xl shadow-2xl p-8 relative max-h-[90vh] overflow-y-auto">
+      <button onclick="closeCourseModal()" aria-label="Fechar detalhe do curso" class="absolute top-6 right-6 text-slate-400 hover:text-slate-700 text-xl">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div id="course-modal-body">
+        <!-- Dynamic Content Injected via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Galeria de Fotos Section -->
+  <section id="galeria" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-sky-600 font-bold text-xs uppercase tracking-wider bg-sky-50 px-3 py-1 rounded-full border border-sky-100">Registros CEIAS</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 mt-3">Galeria de Fotos</h2>
+        <p class="text-slate-600 text-base mt-3">Acompanhe de perto nossos ambientes, feiras de conhecimento e momentos inesquecíveis.</p>
+      </div>
+
+      <!-- Gallery Filter Buttons -->
+      <div class="flex flex-wrap justify-center gap-2 mb-10">
+        <button onclick="filterGallery('todos')" class="gallery-filter-btn px-5 py-2 rounded-xl text-xs font-bold transition-all bg-navy-900 text-white shadow-sm">Todas</button>
+        <button onclick="filterGallery('estrutura')" class="gallery-filter-btn px-5 py-2 rounded-xl text-xs font-bold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200">Estrutura</button>
+        <button onclick="filterGallery('eventos')" class="gallery-filter-btn px-5 py-2 rounded-xl text-xs font-bold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200">Eventos</button>
+        <button onclick="filterGallery('projetos')" class="gallery-filter-btn px-5 py-2 rounded-xl text-xs font-bold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200">Projetos</button>
+        <button onclick="filterGallery('esportes')" class="gallery-filter-btn px-5 py-2 rounded-xl text-xs font-bold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200">Esportes</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="gallery-grid">
+        
+        <!-- Item 1 -->
+        <div class="gallery-item estrutura overflow-hidden rounded-2xl group relative cursor-pointer shadow-md bg-slate-900" onclick="openLightbox(0)">
+          <img src="https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=800&auto=format&fit=crop" alt="Fachada e Pátio Principal" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500 opacity-90 group-hover:opacity-100">
+          <div class="absolute inset-0 bg-gradient-to-t from-navy-900/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+            <span class="text-xs text-sky-400 font-semibold uppercase">Estrutura</span>
+            <p class="font-bold text-sm">Fachada e Pátio Principal</p>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="gallery-item projetos overflow-hidden rounded-2xl group relative cursor-pointer shadow-md bg-slate-900" onclick="openLightbox(1)">
+          <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=800&auto=format&fit=crop" alt="Laboratório de Robótica" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500 opacity-90 group-hover:opacity-100">
+          <div class="absolute inset-0 bg-gradient-to-t from-navy-900/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+            <span class="text-xs text-sky-400 font-semibold uppercase">Projetos</span>
+            <p class="font-bold text-sm">Laboratório de Robótica</p>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="gallery-item eventos overflow-hidden rounded-2xl group relative cursor-pointer shadow-md bg-slate-900" onclick="openLightbox(2)">
+          <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=800&auto=format&fit=crop" alt="Feira Cultural e Científica" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500 opacity-90 group-hover:opacity-100">
+          <div class="absolute inset-0 bg-gradient-to-t from-navy-900/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+            <span class="text-xs text-sky-400 font-semibold uppercase">Eventos</span>
+            <p class="font-bold text-sm">Feira Cultural e Científica</p>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="gallery-item esportes overflow-hidden rounded-2xl group relative cursor-pointer shadow-md bg-slate-900" onclick="openLightbox(3)">
+          <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=800&auto=format&fit=crop" alt="Torneio Interclasses" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500 opacity-90 group-hover:opacity-100">
+          <div class="absolute inset-0 bg-gradient-to-t from-navy-900/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+            <span class="text-xs text-sky-400 font-semibold uppercase">Esportes</span>
+            <p class="font-bold text-sm">Torneio Interclasses de Futsal</p>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="gallery-item estrutura overflow-hidden rounded-2xl group relative cursor-pointer shadow-md bg-slate-900" onclick="openLightbox(4)">
+          <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=800&auto=format&fit=crop" alt="Biblioteca Central" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500 opacity-90 group-hover:opacity-100">
+          <div class="absolute inset-0 bg-gradient-to-t from-navy-900/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+            <span class="text-xs text-sky-400 font-semibold uppercase">Estrutura</span>
+            <p class="font-bold text-sm">Biblioteca e Sala de Leitura</p>
+          </div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="gallery-item projetos overflow-hidden rounded-2xl group relative cursor-pointer shadow-md bg-slate-900" onclick="openLightbox(5)">
+          <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=800&auto=format&fit=crop" alt="Aula Prática de Ciências" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500 opacity-90 group-hover:opacity-100">
+          <div class="absolute inset-0 bg-gradient-to-t from-navy-900/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+            <span class="text-xs text-sky-400 font-semibold uppercase">Projetos</span>
+            <p class="font-bold text-sm">Experimento no Lab de Química</p>
+          </div>
+        </div>
+
+        <!-- Item 7 -->
+        <div class="gallery-item eventos overflow-hidden rounded-2xl group relative cursor-pointer shadow-md bg-slate-900" onclick="openLightbox(6)">
+          <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=800&auto=format&fit=crop" alt="Apresentação Teatral" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500 opacity-90 group-hover:opacity-100">
+          <div class="absolute inset-0 bg-gradient-to-t from-navy-900/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+            <span class="text-xs text-sky-400 font-semibold uppercase">Eventos</span>
+            <p class="font-bold text-sm">Mostra Teatral de Inverno</p>
+          </div>
+        </div>
+
+        <!-- Item 8 -->
+        <div class="gallery-item esportes overflow-hidden rounded-2xl group relative cursor-pointer shadow-md bg-slate-900" onclick="openLightbox(7)">
+          <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=800&auto=format&fit=crop" alt="Treino de Basquete" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500 opacity-90 group-hover:opacity-100">
+          <div class="absolute inset-0 bg-gradient-to-t from-navy-900/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+            <span class="text-xs text-sky-400 font-semibold uppercase">Esportes</span>
+            <p class="font-bold text-sm">Treino de Basquete na Quadra</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Gallery Lightbox Modal -->
+  <div id="lightbox-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-4">
+    <button onclick="closeLightbox()" aria-label="Fechar galeria" class="absolute top-6 right-6 text-white hover:text-sky-400 text-3xl z-10">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <button onclick="prevLightbox()" aria-label="Imagem anterior" class="absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/10 hover:bg-white/20 text-white text-xl">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <button onclick="nextLightbox()" aria-label="Próxima imagem" class="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/10 hover:bg-white/20 text-white text-xl">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+    <div class="max-w-4xl max-h-[85vh] flex flex-col items-center">
+      <img id="lightbox-img" src="" alt="Ampliação" class="max-h-[70vh] rounded-xl object-contain shadow-2xl">
+      <div id="lightbox-caption" class="mt-4 text-center text-white font-medium text-lg"></div>
+    </div>
+  </div>
+
+  <!-- Mural de Notícias, Eventos & Calendário Section -->
+  <section id="noticias" class="py-20 bg-slate-50 border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+        <div>
+          <span class="text-sky-600 font-bold text-xs uppercase tracking-wider bg-sky-50 px-3 py-1 rounded-full border border-sky-200">Comunicação Oficial</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 mt-3">Mural de Notícias &amp; Agenda</h2>
+        </div>
+        <div class="flex items-center gap-2">
+          <input type="text" id="news-search" onkeyup="filterNews()" placeholder="Filtrar por palavra..." class="px-4 py-2 rounded-xl text-sm border border-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500">
+        </div>
+      </div>
+
+      <div class="grid lg:grid-cols-12 gap-8">
+        
+        <!-- News Grid (8 cols) -->
+        <div class="lg:col-span-8 space-y-6" id="news-list">
+          
+          <article class="news-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col sm:flex-row gap-6 items-center">
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=600&auto=format&fit=crop" alt="Matrículas 2026" class="w-full sm:w-48 h-36 object-cover rounded-xl shrink-0">
+            <div>
+              <div class="flex items-center gap-3 text-xs text-slate-500 mb-2">
+                <span class="px-2.5 py-0.5 rounded-full bg-sky-100 text-sky-800 font-semibold">Institucional</span>
+                <span><i class="fa-regular fa-calendar mr-1"></i> 10 Fev 2026</span>
+              </div>
+              <h3 class="news-title text-xl font-bold text-navy-900 hover:text-sky-600 transition-colors">Abertura das Rematrículas e Novas Vagas para 2026</h3>
+              <p class="text-slate-600 text-sm mt-2 line-clamp-2">A coordenação comunica aos pais e responsáveis o cronograma de confirmação de rematrícula e atestado de vaga.</p>
+              <a href="#secretaria" class="inline-flex items-center gap-1 text-xs font-bold text-sky-600 hover:text-navy-900 mt-3">
+                Ler edital completo <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <article class="news-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col sm:flex-row gap-6 items-center">
+            <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=600&auto=format&fit=crop" alt="Torneio de Robótica" class="w-full sm:w-48 h-36 object-cover rounded-xl shrink-0">
+            <div>
+              <div class="flex items-center gap-3 text-xs text-slate-500 mb-2">
+                <span class="px-2.5 py-0.5 rounded-full bg-purple-100 text-purple-800 font-semibold">Robótica</span>
+                <span><i class="fa-regular fa-calendar mr-1"></i> 02 Fev 2026</span>
+              </div>
+              <h3 class="news-title text-xl font-bold text-navy-900 hover:text-sky-600 transition-colors">Alunos do CEIAS Classificados para a Etapa Estadual de Robótica</h3>
+              <p class="text-slate-600 text-sm mt-2 line-clamp-2">A equipe 'Ambrósia Tech' obteve pontuação máxima na categoria de automação e sustentabilidade escolar.</p>
+              <a href="#galeria" class="inline-flex items-center gap-1 text-xs font-bold text-sky-600 hover:text-navy-900 mt-3">
+                Ver fotos da competição <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <article class="news-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col sm:flex-row gap-6 items-center">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=600&auto=format&fit=crop" alt="Reunião Pedagogica" class="w-full sm:w-48 h-36 object-cover rounded-xl shrink-0">
+            <div>
+              <div class="flex items-center gap-3 text-xs text-slate-500 mb-2">
+                <span class="px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-semibold">Comunidade</span>
+                <span><i class="fa-regular fa-calendar mr-1"></i> 25 Jan 2026</span>
+              </div>
+              <h3 class="news-title text-xl font-bold text-navy-900 hover:text-sky-600 transition-colors">Primeira Reunião de Pais e Mestres do Semestre</h3>
+              <p class="text-slate-600 text-sm mt-2 line-clamp-2">Convocação para apresentação das diretrizes acadêmicas, horários de tutoria e novos projetos extracurriculares.</p>
+              <a href="#contato" class="inline-flex items-center gap-1 text-xs font-bold text-sky-600 hover:text-navy-900 mt-3">
+                Confirmar presença <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Upcoming Events Sidebar (4 cols) -->
+        <div class="lg:col-span-4">
+          <div class="bg-navy-900 text-white p-6 rounded-2xl shadow-lg border border-navy-800 space-y-6">
+            <div class="flex items-center justify-between border-b border-navy-700 pb-4">
+              <h3 class="font-bold text-lg text-white flex items-center gap-2">
+                <i class="fa-solid fa-calendar-days text-sky-400"></i> Calendário Próximos Eventos
+              </h3>
+            </div>
+
+            <div class="space-y-4">
+              <!-- Event Item 1 -->
+              <div class="flex items-center gap-4 bg-navy-800/80 p-3.5 rounded-xl border border-navy-700">
+                <div class="text-center bg-sky-500 text-navy-900 rounded-lg p-2 min-w-[55px] shrink-0">
+                  <span class="block text-xs font-extrabold uppercase">MAR</span>
+                  <span class="block text-xl font-black">15</span>
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm text-white">Início das Aulas do 1º Semestre</h4>
+                  <p class="text-xs text-slate-300">Recepção de calouros no auditório principal às 08:00h.</p>
+                </div>
+              </div>
+
+              <!-- Event Item 2 -->
+              <div class="flex items-center gap-4 bg-navy-800/80 p-3.5 rounded-xl border border-navy-700">
+                <div class="text-center bg-sky-500 text-navy-900 rounded-lg p-2 min-w-[55px] shrink-0">
+                  <span class="block text-xs font-extrabold uppercase">ABR</span>
+                  <span class="block text-xl font-black">08</span>
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm text-white">Feira de Profissões e Carreiras</h4>
+                  <p class="text-xs text-slate-300">Palestras com universidades e empresas parceiras.</p>
+                </div>
+              </div>
+
+              <!-- Event Item 3 -->
+              <div class="flex items-center gap-4 bg-navy-800/80 p-3.5 rounded-xl border border-navy-700">
+                <div class="text-center bg-sky-500 text-navy-900 rounded-lg p-2 min-w-[55px] shrink-0">
+                  <span class="block text-xs font-extrabold uppercase">MAI</span>
+                  <span class="block text-xl font-black">20</span>
+                </div>
+                <div>
+                  <h4 class="font-bold text-sm text-white">Jogos Escolares de Primavera</h4>
+                  <p class="text-xs text-slate-300">Abertura solene com desfile das delegações por turma.</p>
+                </div>
+              </div>
+            </div>
+
+            <a href="#secretaria" class="block w-full py-2.5 text-center rounded-xl bg-sky-500 text-navy-900 font-bold text-xs hover:bg-sky-400 transition-colors">
+              Baixar Calendário Letivo Completo (PDF)
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Corpo Docente e Equipe Section -->
+  <section id="equipe" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-sky-600 font-bold text-xs uppercase tracking-wider bg-sky-50 px-3 py-1 rounded-full border border-sky-100">Profissionais Qualificados</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 mt-3">Direção &amp; Corpo Docente</h2>
+        <p class="text-slate-600 text-base mt-3">Uma equipe comprometida com a excelência no ensino e o bem-estar de cada estudante.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <!-- Member 1 -->
+        <div class="bg-slate-50 rounded-2xl p-6 text-center border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&auto=format&fit=crop" alt="Profa. Maria Helena" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-sky-400 shadow-md">
+          <h3 class="font-bold text-lg text-navy-900 mt-4">Profa. Maria Helena Silva</h3>
+          <span class="text-xs font-semibold text-sky-600 uppercase tracking-wide">Direção Geral</span>
+          <p class="text-xs text-slate-500 mt-2">Mestre em Gestão Escolar com 20 anos de vivência no ensino público.</p>
+        </div>
+
+        <!-- Member 2 -->
+        <div class="bg-slate-50 rounded-2xl p-6 text-center border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=400&auto=format&fit=crop" alt="Prof. Carlos Eduardo" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-sky-400 shadow-md">
+          <h3 class="font-bold text-lg text-navy-900 mt-4">Prof. Carlos Eduardo Santos</h3>
+          <span class="text-xs font-semibold text-sky-600 uppercase tracking-wide">Coordenação Pedagógica</span>
+          <p class="text-xs text-slate-500 mt-2">Especialista em Metodologias Ativas e Avaliação da Aprendizagem.</p>
+        </div>
+
+        <!-- Member 3 -->
+        <div class="bg-slate-50 rounded-2xl p-6 text-center border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+          <img src="https://images.unsplash.com/photo-1580894732413-80d8858e70a3?q=80&w=400&auto=format&fit=crop" alt="Profa. Juliana Prado" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-sky-400 shadow-md">
+          <h3 class="font-bold text-lg text-navy-900 mt-4">Profa. Juliana Prado</h3>
+          <span class="text-xs font-semibold text-sky-600 uppercase tracking-wide">Robótica &amp; Física</span>
+          <p class="text-xs text-slate-500 mt-2">Mentora da equipe premiada de tecnologia e inovação do CEIAS.</p>
+        </div>
+
+        <!-- Member 4 -->
+        <div class="bg-slate-50 rounded-2xl p-6 text-center border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=400&auto=format&fit=crop" alt="Profa. Ana Paula Mendes" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-sky-400 shadow-md">
+          <h3 class="font-bold text-lg text-navy-900 mt-4">Profa. Ana Paula Mendes</h3>
+          <span class="text-xs font-semibold text-sky-600 uppercase tracking-wide">Língua Portuguesa &amp; Literatura</span>
+          <p class="text-xs text-slate-500 mt-2">Responsável pelo Clube de Leitura e Mostra Teatral do colégio.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Secretaria Virtual / Links Rápidos & FAQ Section -->
+  <section id="secretaria" class="py-20 bg-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-sky-600 font-bold text-xs uppercase tracking-wider bg-sky-50 px-3 py-1 rounded-full border border-sky-200">Serviços Online</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 mt-3">Secretaria Virtual &amp; Dúvidas</h2>
+        <p class="text-slate-600 text-base mt-3">Acesso rápido aos portais acadêmicos, requerimentos de documentos e perguntas frequentes.</p>
+      </div>
+
+      <!-- Quick Action Portals -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        
+        <a href="javascript:void(0)" onclick="simularServico('Boletim Escolar Online')" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all text-center group">
+          <div class="w-12 h-12 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center mx-auto text-xl mb-4 group-hover:bg-sky-500 group-hover:text-white transition-colors">
+            <i class="fa-solid fa-file-lines"></i>
+          </div>
+          <h3 class="font-bold text-navy-900 text-base">Boletim Escolar Online</h3>
+          <p class="text-slate-500 text-xs mt-1">Consulte notas, faltas e relatórios de desempenho.</p>
+        </a>
+
+        <a href="javascript:void(0)" onclick="simularServico('Declaração de Matrícula')" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all text-center group">
+          <div class="w-12 h-12 rounded-xl bg-navy-100 text-navy-800 flex items-center justify-center mx-auto text-xl mb-4 group-hover:bg-navy-800 group-hover:text-white transition-colors">
+            <i class="fa-solid fa-certificate"></i>
+          </div>
+          <h3 class="font-bold text-navy-900 text-base">Emissão de Documentos</h3>
+          <p class="text-slate-500 text-xs mt-1">Solicite atestados e histórico escolar em formato digital.</p>
+        </a>
+
+        <a href="javascript:void(0)" onclick="simularServico('Horários de Aulas 2026')" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all text-center group">
+          <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto text-xl mb-4 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+            <i class="fa-solid fa-calendar-week"></i>
+          </div>
+          <h3 class="font-bold text-navy-900 text-base">Horário das Turmas</h3>
+          <p class="text-slate-500 text-xs mt-1">Confira a grade horária semanal de cada ano e disciplina.</p>
+        </a>
+
+        <a href="javascript:void(0)" onclick="simularServico('Agendamento com a Coordenação')" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all text-center group">
+          <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center mx-auto text-xl mb-4 group-hover:bg-purple-600 group-hover:text-white transition-colors">
+            <i class="fa-solid fa-comments"></i>
+          </div>
+          <h3 class="font-bold text-navy-900 text-base">Atendimento Presencial</h3>
+          <p class="text-slate-500 text-xs mt-1">Agende horário com a direção ou equipe pedagógica.</p>
+        </a>
+
+      </div>
+
+      <!-- FAQ Accordion -->
+      <div class="max-w-3xl mx-auto bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-200 space-y-4">
+        <h3 class="text-xl font-bold text-navy-900 mb-6 flex items-center gap-2">
+          <i class="fa-solid fa-circle-question text-sky-500"></i> Perguntas Frequentes (FAQ)
+        </h3>
+
+        <!-- FAQ Item 1 -->
+        <div class="border border-slate-200 rounded-xl overflow-hidden">
+          <button onclick="toggleFaq(1)" class="w-full text-left p-4 font-bold text-sm text-navy-900 flex justify-between items-center bg-slate-50 hover:bg-slate-100 transition-colors">
+            <span>Quais são os documentos necessários para a matrícula?</span>
+            <i class="fa-solid fa-chevron-down text-xs transition-transform" id="faq-icon-1"></i>
+          </button>
+          <div id="faq-answer-1" class="hidden p-4 text-xs sm:text-sm text-slate-600 bg-white border-t border-slate-200 leading-relaxed">
+            É preciso apresentar RG e CPF do aluno e do responsável legal, comprovante de residência atualizado (últimos 60 dias), histórico escolar ou declaração de transferência, cartão de vacinação atualizado e foto 3x4 recente.
+          </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="border border-slate-200 rounded-xl overflow-hidden">
+          <button onclick="toggleFaq(2)" class="w-full text-left p-4 font-bold text-sm text-navy-900 flex justify-between items-center bg-slate-50 hover:bg-slate-100 transition-colors">
+            <span>Qual o horário de funcionamento da Secretaria Escolar?</span>
+            <i class="fa-solid fa-chevron-down text-xs transition-transform" id="faq-icon-2"></i>
+          </button>
+          <div id="faq-answer-2" class="hidden p-4 text-xs sm:text-sm text-slate-600 bg-white border-t border-slate-200 leading-relaxed">
+            A secretaria funciona presencialmente de segunda a sexta-feira, das 07h30 às 11h30, das 13h00 às 17h00 e das 18h30 às 21h30 para o atendimento da EJA.
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="border border-slate-200 rounded-xl overflow-hidden">
+          <button onclick="toggleFaq(3)" class="w-full text-left p-4 font-bold text-sm text-navy-900 flex justify-between items-center bg-slate-50 hover:bg-slate-100 transition-colors">
+            <span>O colégio oferece passe escolar/transporte público?</span>
+            <i class="fa-solid fa-chevron-down text-xs transition-transform" id="faq-icon-3"></i>
+          </button>
+          <div id="faq-answer-3" class="hidden p-4 text-xs sm:text-sm text-slate-600 bg-white border-t border-slate-200 leading-relaxed">
+            Sim. A declaração para cadastramento ou renovação do passe escolar estudante pode ser emitida presencialmente ou solicitada via formulário na Secretaria Virtual.
+          </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="border border-slate-200 rounded-xl overflow-hidden">
+          <button onclick="toggleFaq(4)" class="w-full text-left p-4 font-bold text-sm text-navy-900 flex justify-between items-center bg-slate-50 hover:bg-slate-100 transition-colors">
+            <span>Como funcionam as atividades de robótica e esporte?</span>
+            <i class="fa-solid fa-chevron-down text-xs transition-transform" id="faq-icon-4"></i>
+          </button>
+          <div id="faq-answer-4" class="hidden p-4 text-xs sm:text-sm text-slate-600 bg-white border-t border-slate-200 leading-relaxed">
+            As inscrições para projetos extracurriculares são abertas no início de cada semestre letivo. Os treinos e oficinas ocorrem no contra-turno escolar com instrutores especializados.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Formulário de Contato & Localização Section -->
+  <section id="contato" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-sky-600 font-bold text-xs uppercase tracking-wider bg-sky-50 px-3 py-1 rounded-full border border-sky-100">Canais de Atendimento</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 mt-3">Fale com o CEIAS</h2>
+        <p class="text-slate-600 text-base mt-3">Envie sua dúvida, sugestão ou solicitação de atendimento diretamente para nossa equipe.</p>
+      </div>
+
+      <div class="grid lg:grid-cols-12 gap-12">
+        
+        <!-- Contact Form (7 cols) -->
+        <div class="lg:col-span-7 bg-slate-50 p-8 rounded-3xl border border-slate-200 shadow-sm">
+          <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-5">
+            
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div>
+                <label for="contact-name" class="block text-xs font-bold uppercase text-navy-900 mb-1">Nome Completo *</label>
+                <input type="text" id="contact-name" required placeholder="Ex: Maria da Silva" class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-sky-500 focus:outline-none">
+              </div>
+
+              <div>
+                <label for="contact-email" class="block text-xs font-bold uppercase text-navy-900 mb-1">E-mail *</label>
+                <input type="email" id="contact-email" required placeholder="seuemail@exemplo.com" class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-sky-500 focus:outline-none">
+              </div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div>
+                <label for="contact-phone" class="block text-xs font-bold uppercase text-navy-900 mb-1">Telefone / WhatsApp *</label>
+                <input type="tel" id="contact-phone" required placeholder="(41) 99999-0000" class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-sky-500 focus:outline-none">
+              </div>
+
+              <div>
+                <label for="contact-subject" class="block text-xs font-bold uppercase text-navy-900 mb-1">Assunto *</label>
+                <select id="contact-subject" required class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-sky-500 focus:outline-none bg-white">
+                  <option value="">Selecione o setor...</option>
+                  <option value="Matrículas e Vagas">Matrículas e Vagas</option>
+                  <option value="Secretaria e Documentos">Secretaria e Documentos</option>
+                  <option value="Coordenação Pedagógica">Coordenação Pedagógica</option>
+                  <option value="Projetos Extracurriculares">Projetos Extracurriculares</option>
+                  <option value="Outros Assuntos">Outros Assuntos</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="contact-message" class="block text-xs font-bold uppercase text-navy-900 mb-1">Sua Mensagem *</label>
+              <textarea id="contact-message" rows="4" required placeholder="Escreva sua mensagem em detalhes aqui..." class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-sky-500 focus:outline-none"></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-4 rounded-xl bg-navy-900 hover:bg-navy-800 text-white font-bold text-sm shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2">
+              <i class="fa-solid fa-paper-plane text-sky-400"></i> Enviar Mensagem para a Escola
+            </button>
+
+          </form>
+        </div>
+
+        <!-- Location & Details Cards (5 cols) -->
+        <div class="lg:col-span-5 space-y-6">
+          
+          <div class="bg-navy-900 text-white p-8 rounded-3xl space-y-6 shadow-lg border border-navy-800">
+            <h3 class="text-xl font-bold text-white border-b border-navy-700 pb-3 flex items-center gap-2">
+              <i class="fa-solid fa-location-dot text-sky-400"></i> Informações de Contato
+            </h3>
+
+            <div class="space-y-4 text-sm">
+              <div class="flex items-start gap-3">
+                <i class="fa-solid fa-map-pin text-sky-400 text-lg mt-1 shrink-0"></i>
+                <div>
+                  <strong class="block text-white">Endereço</strong>
+                  <span class="text-slate-300">Rua Irmã Ambrósia Sabatovich, 1200 - Bairro Centro, Paraná</span>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <i class="fa-solid fa-phone text-sky-400 text-lg mt-1 shrink-0"></i>
+                <div>
+                  <strong class="block text-white">Telefones</strong>
+                  <span class="text-slate-300">(41) 3333-0000 / (41) 98888-0000 (WhatsApp)</span>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <i class="fa-solid fa-envelope text-sky-400 text-lg mt-1 shrink-0"></i>
+                <div>
+                  <strong class="block text-white">E-mail Institucional</strong>
+                  <span class="text-slate-300">contato@ceias.edu.br</span>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <i class="fa-solid fa-clock text-sky-400 text-lg mt-1 shrink-0"></i>
+                <div>
+                  <strong class="block text-white">Horário de Funcionamento</strong>
+                  <span class="text-slate-300">Segunda a Sexta: 07h30 às 22h30</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mock Interactive Map Card -->
+          <div class="bg-slate-100 rounded-3xl p-4 border border-slate-200 relative overflow-hidden group">
+            <div class="h-44 w-full rounded-2xl bg-slate-300 flex items-center justify-center relative overflow-hidden">
+              <!-- Styled Map Graphic simulation -->
+              <div class="absolute inset-0 bg-[radial-gradient(#00a8e8_1px,transparent_1px)] [background-size:16px_16px] opacity-40"></div>
+              <div class="relative z-10 text-center p-4 bg-white/90 backdrop-blur-sm rounded-xl shadow-md border border-slate-200">
+                <i class="fa-solid fa-school text-2xl text-navy-900 mb-1"></i>
+                <p class="font-bold text-xs text-navy-900">CEIAS - Irmã Ambrósia Sabatovich</p>
+                <p class="text-[10px] text-slate-500">Localização Central Próxima ao Terminal</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Toast Notification Modal for Form Feedback -->
+  <div id="toast-modal" class="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-md w-full p-6 text-center space-y-4 shadow-2xl animate-bounce-once">
+      <div class="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto text-2xl">
+        <i class="fa-solid fa-circle-check"></i>
+      </div>
+      <h3 class="text-xl font-bold text-navy-900">Mensagem Enviada!</h3>
+      <p id="toast-message-body" class="text-sm text-slate-600"></p>
+      <button onclick="closeToastModal()" class="w-full py-3 rounded-xl bg-navy-900 text-white font-bold text-sm">
+        Entendido
+      </button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-navy-900 text-slate-300 border-t border-navy-800 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-navy-800">
+        
+        <!-- Col 1: Brand Info -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-sky-500 flex items-center justify-center text-white font-bold">
+              <i class="fa-solid fa-school"></i>
+            </div>
+            <span class="text-xl font-extrabold text-white">CEIAS</span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Colégio Estadual Irmã Ambrósia Sabatovich. Compromisso contínuo com a educação de qualidade, ética e preparação profissional de jovens e adultos.
+          </p>
+          <div class="flex items-center space-x-3 pt-2">
+            <a href="#" aria-label="Facebook" class="w-9 h-9 rounded-lg bg-navy-800 hover:bg-sky-500 hover:text-white flex items-center justify-center text-slate-300 transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram" class="w-9 h-9 rounded-lg bg-navy-800 hover:bg-sky-500 hover:text-white flex items-center justify-center text-slate-300 transition-colors"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube" class="w-9 h-9 rounded-lg bg-navy-800 hover:bg-sky-500 hover:text-white flex items-center justify-center text-slate-300 transition-colors"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" aria-label="WhatsApp" class="w-9 h-9 rounded-lg bg-navy-800 hover:bg-sky-500 hover:text-white flex items-center justify-center text-slate-300 transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation -->
+        <div>
+          <h4 class="text-white font-bold text-sm mb-4 border-l-2 border-sky-400 pl-2">Links Rápidos</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#inicio" class="hover:text-sky-400 transition-colors">Início</a></li>
+            <li><a href="#sobre" class="hover:text-sky-400 transition-colors">Sobre o Colégio</a></li>
+            <li><a href="#modalidades" class="hover:text-sky-400 transition-colors">Ensino Fundamental e Médio</a></li>
+            <li><a href="#galeria" class="hover:text-sky-400 transition-colors">Galeria de Fotos</a></li>
+            <li><a href="#noticias" class="hover:text-sky-400 transition-colors">Notícias e Comunicados</a></li>
+            <li><a href="#equipe" class="hover:text-sky-400 transition-colors">Corpo Docente</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Portal Links -->
+        <div>
+          <h4 class="text-white font-bold text-sm mb-4 border-l-2 border-sky-400 pl-2">Serviços e Alunos</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#secretaria" class="hover:text-sky-400 transition-colors">Boletim Online</a></li>
+            <li><a href="#secretaria" class="hover:text-sky-400 transition-colors">Calendário Acadêmico 2026</a></li>
+            <li><a href="#secretaria" class="hover:text-sky-400 transition-colors">Rematrículas</a></li>
+            <li><a href="#secretaria" class="hover:text-sky-400 transition-colors">Perguntas Frequentes (FAQ)</a></li>
+            <li><a href="#contato" class="hover:text-sky-400 transition-colors">Ouvidoria e Contato</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Newsletter -->
+        <div>
+          <h4 class="text-white font-bold text-sm mb-4 border-l-2 border-sky-400 pl-2">Informativo CEIAS</h4>
+          <p class="text-xs text-slate-400 mb-3">Receba avisos e comunicados importantes no seu e-mail.</p>
+          <form onsubmit="handleNewsletter(event)" class="space-y-2">
+            <input type="email" required placeholder="Seu e-mail..." class="w-full px-3 py-2 rounded-lg bg-navy-800 border border-navy-700 text-xs text-white focus:outline-none focus:ring-1 focus:ring-sky-400">
+            <button type="submit" class="w-full py-2 rounded-lg bg-sky-500 hover:bg-sky-400 font-bold text-xs text-navy-900 transition-colors">
+              Cadastrar E-mail
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Bottom Credits -->
+      <div class="pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+        <p>&copy; 2026 CEIAS - Colégio Estadual Irmã Ambrósia Sabatovich. Todos os direitos reservados.</p>
+        <p>Desenvolvido para a Comunidade Escolar do CEIAS</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Floating Back To Top Button -->
+  <button id="back-to-top" onclick="scrollToTop()" aria-label="Voltar ao topo" class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-sky-500 text-navy-900 shadow-xl flex items-center justify-center text-lg hover:bg-sky-400 transition-all opacity-0 pointer-events-none hover:scale-110">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script>
+    // --- Mobile Menu Toggle ---
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+      menu.classList.toggle('flex');
+    }
+
+    // --- Search Modal Toggle ---
+    function toggleSearchModal() {
+      const modal = document.getElementById('search-modal');
+      modal.classList.toggle('hidden');
+      modal.classList.toggle('flex');
+      if (!modal.classList.contains('hidden')) {
+        document.getElementById('site-search-input').focus();
+      }
+    }
+
+    // --- Quick Search Filter ---
+    function handleQuickSearch() {
+      const query = document.getElementById('site-search-input').value.toLowerCase().trim();
+      const box = document.getElementById('search-results-box');
+      
+      const searchData = [
+        { title: 'Matrículas e Rematrículas 2026', link: '#noticias' },
+        { title: 'Boletim Escolar Online', link: '#secretaria' },
+        { title: 'Clube de Robótica e Programação', link: '#modalidades' },
+        { title: 'Ensino Médio Técnico Integrado', link: '#modalidades' },
+        { title: 'Calendário Letivo PDF', link: '#noticias' },
+        { title: 'Irmã Ambrósia Sabatovich - História da Patrona', link: '#sobre' },
+        { title: 'Fale com a Direção / Telefone', link: '#contato' }
+      ];
+
+      if (!query) {
+        box.innerHTML = '<p class="text-slate-500 text-xs italic">Sugestões rápidas: Matrículas 2026, Calendário Escolar, Feira Cultural, Horários de Aulas</p>';
+        return;
+      }
+
+      const filtered = searchData.filter(item => item.title.toLowerCase().includes(query));
+      if (filtered.length === 0) {
+        box.innerHTML = '<p class="text-slate-500 text-xs">Nenhum resultado encontrado para "' + query + '".</p>';
+      } else {
+        box.innerHTML = filtered.map(item => `
+          <a href="${item.link}" onclick="toggleSearchModal()" class="block p-2 rounded.lg bg-slate-100 hover:bg-sky-100 dark:bg-navy-800 text-slate-800 dark:text-white text-xs font-semibold">
+            <i class="fa-solid fa-arrow-right text-sky-500 mr-2"></i> ${item.title}
+          </a>
+        `).join('');
+      }
+    }
+
+    // --- About Section Tabs ---
+    function switchTab(tabId) {
+      document.querySelectorAll('.about-tab-btn').forEach(btn => {
+        btn.classList.remove('bg-navy-900', 'text-white', 'shadow-md');
+        btn.classList.add('bg-slate-100', 'text-slate-700');
+      });
+      document.querySelectorAll('.about-tab-content').forEach(content => {
+        content.classList.add('hidden');
+      });
+
+      const activeBtn = document.getElementById(`tab-btn-${tabId}`);
+      const activeContent = document.getElementById(`tab-content-${tabId}`);
+
+      if (activeBtn && activeContent) {
+        activeBtn.classList.remove('bg-slate-100', 'text-slate-700');
+        activeBtn.classList.add('bg-navy-900', 'text-white', 'shadow-md');
+        activeContent.classList.remove('hidden');
+      }
+    }
+
+    // --- Course Detail Modal Data ---
+    const courseDetails = {
+      fund2: {
+        title: "Ensino Fundamental II (6º ao 9º Ano)",
+        badge: "Matutino e Vespertino",
+        desc: "O Ensino Fundamental II no CEIAS visa consolidar o pensamento crítico, a alfabetização científica e a capacidade de resolução de problemas.",
+        highlights: ["Projetos de Língua Portuguesa e Produção Textual", "Aulas de Laboratório de Ciências e Robótica Inicial", "Projetos de Educação Financeira e Cidadania"]
+      },
+      medio: {
+        title: "Ensino Médio Regular",
+        badge: "1ª à 3ª Série - Diurno",
+        desc: "Uma formação sólida voltada para a aprovação nos vestibulares e no ENEM, estimulando a autonomia dos estudantes.",
+        highlights: ["Simulados periódicos no formato ENEM", "Aprofundamento nas áreas do conhecimento", "Orientação vocacional e tutoria escolar"]
+      },
+      tecnico: {
+        title: "Ensino Médio Técnico Profissionalizante",
+        badge: "Técnico Integrado & Subsequente",
+        desc: "Capacitação profissional alinhada às necessidades do setor produtivo, preparando o jovem para ingressar no mercado de trabalho com qualificação.",
+        highlights: ["Cursos em Desenvolvimento de Sistemas e Administração", "Aulas práticas nos laboratórios digitais", "Estágios supervisionados e parcerias"]
+      },
+      eja: {
+        title: "EJA - Educação de Jovens e Adultos",
+        badge: "Turno Noturno",
+        desc: "Proposta pedagógica flexível para quem busca concluir os estudos com qualidade de ensino e respeito ao tempo do trabalhador.",
+        highlights: ["Formato semestral e módulos contínuos", "Suporte pedagógico presencial e digital", "Material didático adaptado"]
+      },
+      extracurricular: {
+        title: "Projetos Extracurriculares & Atividades Culturais",
+        badge: "Contra-turno Escolar",
+        desc: "Atividades que potencializam habilidades esportivas, artísticas e tecnológicas dos estudantes do CEIAS.",
+        highlights: ["Clube de Robótica Lego/Arduino", "Fanfarra e Coral CEIAS", "Treinos de Futsal, Vôlei e Basquete"]
+      }
+    };
+
+    function openCourseModal(courseKey) {
+      const data = courseDetails[courseKey];
+      if (!data) return;
+
+      const modalBody = document.getElementById('course-modal-body');
+      modalBody.innerHTML = `
+        <span class="text-xs font-bold px-3 py-1 rounded-full bg-sky-100 text-sky-800 uppercase tracking-wide">${data.badge}</span>
+        <h3 class="text-2xl font-extrabold text-navy-900 mt-3 mb-4">${data.title}</h3>
+        <p class="text-slate-600 text-sm leading-relaxed mb-6">${data.desc}</p>
+        <h4 class="font-bold text-navy-900 text-sm mb-3"><i class="fa-solid fa-star text-amber-500 mr-2"></i> Destaques do Curso:</h4>
+        <ul class="space-y-2 text-sm text-slate-700 mb-6">
+          ${data.highlights.map(item => `<li class="flex items-center gap-2"><i class="fa-solid fa-check text-sky-500"></i> ${item}</li>`).join('')}
+        </ul>
+        <a href="#contato" onclick="closeCourseModal()" class="block w-full py-3 text-center rounded-xl bg-navy-900 text-white font-bold text-sm hover:bg-navy-800 transition-colors">
+          Solicitar Informações de Matrícula
+        </a>
+      `;
+
+      const modal = document.getElementById('course-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeCourseModal() {
+      const modal = document.getElementById('course-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    // --- Photo Gallery Lightbox ---
+    const galleryItems = [
+      { src: "https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=1200&auto=format&fit=crop", caption: "Fachada e Pátio Principal do CEIAS" },
+      { src: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1200&auto=format&fit=crop", caption: "Laboratório de Robótica e Tecnologia" },
+      { src: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=1200&auto=format&fit=crop", caption: "Feira Cultural e Científica Anual" },
+      { src: "https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=1200&auto=format&fit=crop", caption: "Torneio Interclasses de Futsal" },
+      { src: "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=1200&auto=format&fit=crop", caption: "Biblioteca Central e Sala de Leitura" },
+      { src: "https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=1200&auto=format&fit=crop", caption: "Aulas Práticas no Laboratório de Química" },
+      { src: "https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1200&auto=format&fit=crop", caption: "Apresentação do Grupo Teatral" },
+      { src: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=1200&auto=format&fit=crop", caption: "Treino do Time de Basquete" }
+    ];
+
+    let currentLightboxIdx = 0;
+
+    function openLightbox(idx) {
+      currentLightboxIdx = idx;
+      updateLightboxContent();
+      const modal = document.getElementById('lightbox-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function updateLightboxContent() {
+      const item = galleryItems[currentLightboxIdx];
+      document.getElementById('lightbox-img').src = item.src;
+      document.getElementById('lightbox-caption').textContent = item.caption;
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('lightbox-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function nextLightbox() {
+      currentLightboxIdx = (currentLightboxIdx + 1) % galleryItems.length;
+      updateLightboxContent();
+    }
+
+    function prevLightbox() {
+      currentLightboxIdx = (currentLightboxIdx - 1 + galleryItems.length) % galleryItems.length;
+      updateLightboxContent();
+    }
+
+    function filterGallery(category) {
+      document.querySelectorAll('.gallery-filter-btn').forEach(btn => {
+        btn.classList.remove('bg-navy-900', 'text-white');
+        btn.classList.add('bg-slate-100', 'text-slate-700');
+      });
+      event.target.classList.remove('bg-slate-100', 'text-slate-700');
+      event.target.classList.add('bg-navy-900', 'text-white');
+
+      const items = document.querySelectorAll('.gallery-item');
+      items.forEach(item => {
+        if (category === 'todos' || item.classList.contains(category)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    // --- News Search Filter ---
+    function filterNews() {
+      const input = document.getElementById('news-search').value.toLowerCase();
+      const newsCards = document.querySelectorAll('.news-card');
+
+      newsCards.forEach(card => {
+        const title = card.querySelector('.news-title').textContent.toLowerCase();
+        if (title.includes(input)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // --- FAQ Accordion ---
+    function toggleFaq(id) {
+      const answer = document.getElementById(`faq-answer-${id}`);
+      const icon = document.getElementById(`faq-icon-${id}`);
+
+      if (answer.classList.contains('hidden')) {
+        answer.classList.remove('hidden');
+        icon.classList.add('rotate-180');
+      } else {
+        answer.classList.add('hidden');
+        icon.classList.remove('rotate-180');
+      }
+    }
+
+    // --- Virtual Secretariat Simulator ---
+    function simularServico(nomeServico) {
+      document.getElementById('toast-message-body').textContent = `Você iniciou o serviço "${nomeServico}". Para continuar, utilize suas credenciais do Portal do Aluno ou dirija-se à secretaria presencial.`;
+      const modal = document.getElementById('toast-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    // --- Contact Form Handler ---
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      const nome = document.getElementById('contact-name').value;
+      const assunto = document.getElementById('contact-subject').value;
+
+      document.getElementById('toast-message-body').textContent = `Obrigado, ${nome}! Sua mensagem sobre "${assunto}" foi recebida com sucesso. Nossa equipe retornará em breve.`;
+      
+      const modal = document.getElementById('toast-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+
+      document.getElementById('contact-form').reset();
+    }
+
+    function closeToastModal() {
+      const modal = document.getElementById('toast-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function handleNewsletter(e) {
+      e.preventDefault();
+      document.getElementById('toast-message-body').textContent = "E-mail cadastrado com sucesso no Informativo CEIAS!";
+      const modal = document.getElementById('toast-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      e.target.reset();
+    }
+
+    // --- Back to Top Button Logic ---
+    window.addEventListener('scroll', () => {
+      const btn = document.getElementById('back-to-top');
+      if (window.scrollY > 400) {
+        btn.classList.remove('opacity-0', 'pointer-events-none');
+        btn.classList.add('opacity-100');
+      } else {
+        btn.classList.add('opacity-0', 'pointer-events-none');
+        btn.classList.remove('opacity-100');
+      }
+    });
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
